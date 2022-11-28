@@ -1,4 +1,4 @@
-# Url Shortner
+# Url Shortener 
 
 ## This is a simple project where you can short your urls by giving a long URL
 
