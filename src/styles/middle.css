@@ -1,0 +1,336 @@
+.middle {
+  background-color: #f0f1f6;
+  position: relative;
+}
+
+.middle__searchBox {
+  width: 80%;
+  height: 170px;
+  margin: 0 auto;
+  margin-top: 95px;
+  position: relative;
+  bottom: 85px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  background-image: url(../images/bg-shorten-desktop.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #3a3053;
+}
+.middle__searchBox > input {
+  width: 70%;
+  height: 65px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-indent: 30px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .middle__searchBox > input {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .middle__searchBox > input {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .middle__searchBox {
+    padding-block: 15px;
+    flex-direction: column;
+  }
+  .middle__searchBox > input {
+    width: 90%;
+    text-indent: 10px;
+  }
+}
+
+.middle__searchBox > button {
+  width: 189px;
+  height: 65px;
+  margin-left: 25px;
+  border-radius: 10px;
+  background-color: hsl(180, 66%, 49%);
+  color: #ffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 300ms ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .middle__searchBox > input {
+    height: 60px;
+  }
+  .middle__searchBox > button {
+    width: 90%;
+    margin-left: 0px;
+    height: 50px;
+  }
+}
+
+.middle__searchResult__container {
+  width: 80%;
+  height: auto;
+  position: relative;
+  bottom: 60px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: all 300ms ease-in-out;
+}
+
+.middle__searchResult {
+  height: 70px;
+  width: 100%;
+  margin-bottom: 25px;
+  background: #ffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  animation: InAnimation 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+@keyframes InAnimation {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.middle__searchResult > button {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  color: #ffff;
+
+  margin-inline: 25px;
+}
+
+.middle__searchResult > button:hover {
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.middle__searchResult > span {
+  flex: 1;
+  color: hsl(180, 66%, 49%);
+}
+.middle__searchResult > div {
+  padding-inline: 30px;
+  flex: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.middle__searchBox > button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+
+@media only screen and (max-width: 800px) {
+  .middle__searchResult {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 180px;
+
+    overflow: hidden;
+  }
+  .middle__searchResult > div {
+    height: 10px;
+    width: 85%;
+
+    line-height: 55px;
+
+    flex: 1;
+    text-align: center;
+
+    border-bottom: 1px solid #836969;
+    overflow: hidden;
+  }
+
+  .middle__searchResult > span {
+    position: relative;
+    line-height: 55px;
+    right: 0;
+    flex: 1;
+    width: 85%;
+
+    text-align: center;
+
+    padding-inline: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .middle__searchResult > button {
+    position: relative;
+    right: 0;
+    height: 35px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .middle__searchResult > button {
+    width: 85%;
+  }
+}
+
+.middle__CenteredText {
+  text-align: center;
+}
+.middle__CenteredText > h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.middle__CenteredText > p {
+  margin: 0 auto;
+  width: 480px;
+  font-weight: 500;
+  color: hsl(257, 7%, 63%);
+}
+
+@media only screen and (max-width: 600px) {
+  .middle__CenteredText > p {
+    width: 300px;
+  }
+}
+
+.middle__boxArea {
+  width: 80%;
+  height: auto;
+  margin: 110px auto;
+  margin-bottom: 0;
+  padding-bottom: 210px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media only screen and (max-width: 1400px) {
+  .middle__boxArea {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .middle__boxArea {
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+  }
+}
+
+hr {
+  height: 10px;
+  width: 80%;
+  position: absolute;
+  background-color: hsl(180, 66%, 49%);
+  top: 140px;
+  z-index: 1;
+  outline: none;
+  border: none;
+}
+.middle__boxArea > section {
+  width: 350px;
+  height: 265px;
+  z-index: 2;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 400px) {
+  .middle__boxArea > section {
+    width: 90%;
+  }
+}
+
+.middle__boxArea__box1 > div {
+  background-image: url(../images/icon-brand-recognition.svg);
+}
+.middle__boxArea__box2 > div {
+  background-image: url(../images/icon-detailed-records.svg);
+}
+.middle__boxArea__box3 > div {
+  background-image: url(../images/icon-fully-customizable.svg);
+}
+.middle__boxArea__box2 {
+  position: relative;
+  top: 45px;
+}
+.middle__boxArea__box3 {
+  position: relative;
+  top: 90px;
+}
+
+.middle__boxArea div {
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: hsl(252, 27%, 26%);
+  background-position: center;
+  position: relative;
+  left: 40px;
+  bottom: 45px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .middle__boxArea div {
+    margin-inline: auto;
+    left: 0;
+  }
+}
+
+.middle__boxArea h3,
+p {
+  margin-left: 45px;
+}
+.middle__boxArea h3 {
+  font-size: 1.5rem;
+  margin-top: -15px;
+}
+.middle__boxArea p {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: hsl(257, 7%, 63%);
+  margin-top: 15px;
+  width: 80%;
+}
+
+@media only screen and (max-width: 1200px) {
+  hr {
+    height: 600px;
+    width: 10px;
+    position: absolute;
+    background-color: hsl(180, 66%, 49%);
+    top: 140px;
+    z-index: 1;
+    outline: none;
+    border: none;
+  }
+}
