@@ -21,7 +21,6 @@ const Middle = () => {
       domain: "bit.ly",
       long_url: url,
     };
-
     fetch("https://api-ssl.bitly.com/v4/shorten", {
       method: "POST",
       headers: {
@@ -32,10 +31,14 @@ const Middle = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        setShortedUrls({
-          provided: url,
-          shorted: res.link,
-        });
+        setShortedUrls((old) => [
+          {
+            provided: url,
+            shorted: res.link,
+          },
+          ...old,
+        ]);
+        setLoading(false);
       });
   }
 
